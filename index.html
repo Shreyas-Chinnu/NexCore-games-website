@@ -5,27 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexCore Games</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
         }
+
         header h1 {
-            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .game {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .game img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 0.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff6600;
+        }
+
+        form {
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background: #ff6600;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #e65c00;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to NexCore Games</h1>
+        <p>Your hub for innovative and exciting gaming experiences.</p>
     </header>
-    <p>Your hub for innovative and exciting gaming experiences.</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About NexCore Games</h2>
+            <p>At NexCore Games, we are passionate about crafting immersive gaming experiences. From thrilling adventures to mind-bending puzzles, we aim to revolutionize the gaming industry with every release.</p>
+        </section>
+
+        <section id="games" class="section">
+            <h2>Our Games</h2>
+            <div class="games">
+                <div class="game">
+                    <img src="game1.jpg" alt="Game 1">
+                    <h3>Game Title 1</h3>
+                    <p>A brief description of the game.</p>
+                </div>
+                <div class="game">
+                    <img src="game2.jpg" alt="Game 2">
+                    <h3>Game Title 2</h3>
+                    <p>A brief description of the game.</p>
+                </div>
+                <!-- Add more games here -->
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NexCore Games. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>
